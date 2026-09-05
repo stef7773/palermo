@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
 <meta property="og:title" content="Palermo — Cucina Italiana">
 <meta property="og:description" content="Cucina italiana rústica y elegante en Quito. Pizza al horno de leña, pastas artesanales y una carta de vinos pensada para compartir.">
-<meta property="og:image" content="https://stef7773.github.io/palermo/assets/images/pizza-terrace-night.jpg">
+<meta property="og:image" content="https://stef7773.github.io/palermo/assets/images/og-banner.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,14 +74,15 @@
     display:grid; grid-template-columns:auto 1fr auto; align-items:center;
     height:84px; max-width:1440px; gap:20px;
   }
-  .nav-center{display:flex; flex-direction:column; align-items:center; gap:2px;}
-  .nav-credit{
-    font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.82rem;
-    letter-spacing:0.04em; color:var(--ink-dim); opacity:0.85;
-  }
+  .nav-center{display:flex; align-items:center;}
   .brand{display:flex; align-items:center; gap:12px;}
   .brand img{width:38px; height:38px;}
-  .brand span{font-family:'Playfair Display',serif; font-size:1.3rem; letter-spacing:0.04em;}
+  .brand-text{display:flex; flex-direction:column; align-items:flex-start; line-height:1.15;}
+  .brand-name{font-family:'Playfair Display',serif; font-size:1.3rem; letter-spacing:0.04em;}
+  .nav-credit{
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.68rem;
+    letter-spacing:0.03em; color:var(--ink-dim); opacity:0.8; white-space:nowrap;
+  }
   .nav-links{display:flex; gap:34px; font-family:'Inter',sans-serif; font-size:0.86rem; letter-spacing:0.03em; color:var(--ink-dim);}
   .nav-links a{transition:color .2s;}
   .nav-links a:hover{color:var(--gold-soft);}
@@ -225,7 +226,10 @@
   <div class="wrap">
     <div class="brand">
       <img src="assets/images/logo.png" alt="Palermo">
-      <span>PALERMO</span>
+      <div class="brand-text">
+        <span class="brand-name">PALERMO</span>
+        <span class="nav-credit">por Stefano Del Moro</span>
+      </div>
     </div>
     <div class="nav-center">
       <div class="nav-links">
@@ -234,7 +238,6 @@
         <a href="#menu">Menú</a>
         <a href="#reservas">Reservas</a>
       </div>
-      <span class="nav-credit">Stefano Del Moro</span>
     </div>
     <a class="nav-cta" href="https://wa.me/593982630024?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Palermo" target="_blank" rel="noopener">Reservar mesa</a>
   </div>
